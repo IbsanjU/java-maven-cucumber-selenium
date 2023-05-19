@@ -29,6 +29,8 @@ public class CucumberRunner {
     public void setupDriver() {
         BaseCollection.initializeBrowser(browserName);
         driver = BaseCollection.getBrowser(browserName);
+        TestContext.setCucumberRunner(this); // Set the instance in the context holder
+        TestContext.setBrowserName(browserName); // Set the browserName in the context holder
     }
 
     @After

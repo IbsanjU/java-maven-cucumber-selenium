@@ -10,7 +10,7 @@ public class StepDefinitions {
 
     @Given("I open the browser")
     public void iOpenTheBrowser() {
-        driver = BaseCollection.getBrowser(CucumberRunner.browserName);
+        driver = BaseCollection.getBrowser(TestContext.getBrowserName());
         // Perform actions on the retrieved browser instance
     }
 
